@@ -31,9 +31,17 @@
               "src/assets"
             ],
             "styles": [
+
+              "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+             
+
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -78,7 +86,10 @@
               "browserTarget": "Angular-Contact-Crud:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "proxyConfig": "src/proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
