@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IContact } from 'src/app/models/IContact';
 import { ContactService } from 'src/app/services/contact.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact-manager',
@@ -44,14 +45,66 @@ export class ContactManagerComponent implements OnInit {
 
   public clickDeleteContact(contactId: string | undefined)
   {
-    if(contactId){
-      this.contactService.deleteContact(contactId).subscribe((data:{}) => {
-        this.getAllContactsFromServer();
-
-      }, (error) => {
-        this.errorMessage =error;
-      });
-    }
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success',
+        cancelButton: 'btn btn-danger'
+      },
+      buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: 'Are you sure?',
+      text: "You want to delete this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Yes, delete it!',
+      cancelButtonText: 'No, cancel!',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        if(contactId){
+          this.contactService.deleteContact(contactId).subscribe((data:{}) => {
+            this.getAllContactsFromServer();
+    
+          }, (error) => {
+            this.errorMessage =error;
+          });
+        }
+        swalWithBootstrapButtons.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          'Cancelled',
+          'Your imaginary file is safe :)',
+          'error'
+        )
+      }
+    })
+    /*Swal.fire({
+      title: 'Are you sure?',
+      text: "Are You Sure You want to delete this!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Deleted!',
+          'Your file has been deleted.',
+          'success'
+        )
+      }
+    })*/
+    
   }
 
   search() {

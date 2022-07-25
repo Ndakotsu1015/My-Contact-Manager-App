@@ -11,34 +11,24 @@
       "groupId": "1"
     },
     {
-      "id": "D6BNdWnYZ",
-      "name": "SOLOMON ADETUNBI",
-      "company": "Chief Operating Officer",
-      "email": "mrsolex@gmail.com",
-      "title": "Century Information Systems Limited",
-      "mobile": 9076482620,
       "photo": "https://centuryinformationsystems.com/assets/img/Resources/companyPix/MrS.jpg",
-      "groupId": "1"
-    },
-    {
-      "id": "D6BNdWnQR",
-      "name": "JOSEPH ONYILO",
+      "name": "SOLOMON ADETUNBI",
+      "email": "mrsolex@gmail.com",
+      "mobile": 8076543218,
       "company": "Century Information Systems Limited",
-      "email": "onyilo@gmail.com",
-      "title": "Chief Executive Officer",
-      "mobile": 8014145676,
-      "photo": "https://centuryinformationsystems.com/assets/img/Resources/companyPix/ceo2.jpg",
-      "groupId": "1"
+      "title": "Chief Operating Officer",
+      "groupId": "4",
+      "id": "3pZHWFB"
     },
     {
-      "id": "D6BNdWnPM",
-      "name": "MOHAMMED ALIYU",
-      "company": "Maliyu ICT Services",
-      "email": "maliyu1015@gmail.com",
-      "title": "Aliyu Empowerment Initiative",
-      "mobile": 8036343085,
-      "photo": "https://scontent.flos3-1.fna.fbcdn.net/v/t39.30808-1/275891426_5014813535232698_5727187131675888459_n.jpg?stp=dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=7206a8&_nc_eui2=AeGv--LoSJ1ZTDlJJNsVnBXGthQsWiwMurK2FCxaLAy6slVfGc7zHUQfQpZOpwhH6Tu4o1Idbz8qDbmi2zzU1sJm&_nc_ohc=TaGxmvsjSxgAX_HLHlS&_nc_ht=scontent.flos3-1.fna&oh=00_AT8RLr7cpVBOHCvCwRx5t4lImxb2AYGAVFocSJ31f1KNtg&oe=62DF1FDB",
-      "groupId": "4"
+      "title": "Chief Executive Officer",
+      "name": "JOSEPH ONYILO",
+      "photo": "https://centuryinformationsystems.com/assets/img/Resources/companyPix/ceo2.jpg",
+      "email": "oyinlo@gmail.com",
+      "mobile": 8034567893,
+      "company": "Century Information Systems Limited",
+      "groupId": "4",
+      "id": "rQ4VzWX"
     }
   ],
   "groups": [
